@@ -20,6 +20,8 @@ const gradientColors = {
     VERY_DARK_DESATURATED_BLUE: 'hsl(237, 23%, 32%)'
 }
 
+
+
 export const Title = styled.h1`
     
 `
