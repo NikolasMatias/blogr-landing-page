@@ -1,25 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import styled, {ThemeProvider} from "styled-components";
+import {defaultTheme} from "./themes/DefaultTheme";
+import Button from "./components/Button";
+
+enum VARIANT {
+    PRIMARY,
+    SECONDARY
+}
+interface IProps {
+    variant?: VARIANT
+}
+
+const Container = styled.div`
+  margin: 5px auto 5px auto;
+`;
 
 function App() {
+    const [theme, setTheme] = useState(defaultTheme);
+    const updateTheme = () => {
+
+    }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ThemeProvider theme={theme}>
+        <Container>
+          <Button variant={VARIANT.SECONDARY}>Teste</Button>
+        </Container>
+      </ThemeProvider>
+    </>
   );
 }
 
