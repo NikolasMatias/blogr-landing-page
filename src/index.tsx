@@ -4,13 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import themes from './themes/schema.json';
-import {getFromLS, setToLS} from './utils/storage';
-
 const Index = () => {
-    setToLS('all-themes', themes);
-    console.log(themes);
-    console.log(getFromLS('all-themes'))
     return(
         <App />
     )

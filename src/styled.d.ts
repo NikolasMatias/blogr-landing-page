@@ -4,16 +4,45 @@ interface IPalette {
     main: string
     contrastText: string
 }
+
+interface IPrimary {
+    lightRed: string,
+    veryLightRed: string,
+    veryDarkBlue: string
+}
+
+interface INeutral {
+    white: string,
+    grayishBlue: string,
+    veryDarkGrayishBlue: string,
+    veryDarkBlackBlue: string
+}
+
+interface IGradient {
+    veryLightRed: string,
+    lightRed: string,
+    veryDarkGrayBlue: string,
+    veryDarkDesaturatedBlue: string
+}
+
+interface IFont {
+    family: string,
+    weights: number[],
+    url: string
+}
+
 declare module 'styled-components' {
     export interface DefaultTheme {
         borderRadius: string
         palette: {
-            common: {
-                black: string
-                white: string
-            }
-            primary: IPalette
-            secondary: IPalette
+            primary: IPrimary,
+            neutral: INeutral,
+            gradient: IGradient
+        },
+        typography: {
+            fontSizeDefault: string,
+            main: IFont,
+            secondary: IFont
         }
     }
 }

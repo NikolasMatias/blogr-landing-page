@@ -1,32 +1,28 @@
 import React, {useState} from 'react';
+import logo from './assets/images/logo.svg';
 import './App.css';
-import styled, {ThemeProvider} from "styled-components";
+import {ThemeProvider} from "styled-components";
 import {defaultTheme} from "./themes/DefaultTheme";
-import Button from "./components/Button";
-
-enum VARIANT {
-    PRIMARY,
-    SECONDARY
-}
-interface IProps {
-    variant?: VARIANT
-}
-
-const Container = styled.div`
-  margin: 5px auto 5px auto;
-`;
+import Container from "./components/Container";
+import {Button} from "./components/Button";
+import {VARIANT} from "./components/Button/styled";
+import {GlobalStyles} from "./themes/GlobalStyles";
+import {Header} from "./components/Header";
 
 function App() {
     const [theme, setTheme] = useState(defaultTheme);
-    const updateTheme = () => {
-
-    }
 
   return (
     <>
       <ThemeProvider theme={theme}>
+          <GlobalStyles />
         <Container>
-          <Button variant={VARIANT.SECONDARY}>Teste</Button>
+            <Header>
+                <img src={logo} alt="Logo of the project Blogr Landing Page"/>
+                <h1>Teste 2</h1>
+                <Button variant={VARIANT.PRIMARY}>Start for Free</Button>
+                <Button variant={VARIANT.SECONDARY}>Learn More</Button>
+            </Header>
         </Container>
       </ThemeProvider>
     </>

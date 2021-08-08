@@ -1,7 +1,9 @@
-import Button from './styled'
+import ButtonDefault from './styled'
+import React from "react";
+import {IProps} from "./styled";
 
-export default ({children, variant}) => {
+export const Button: React.FC<IProps> = ({children, variant}) => {
     return (
-        <Button variant={variant}>{children}</Button>
+        <ButtonDefault variant={variant}>{children}</ButtonDefault>
     );
 }
