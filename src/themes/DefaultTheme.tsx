@@ -3,7 +3,9 @@ import { DefaultTheme } from 'styled-components'
 
 export enum VARIANT {
     PRIMARY,
-    SECONDARY
+    SECONDARY,
+    THIRD,
+    FOURTH
 }
 
 export interface IProps {

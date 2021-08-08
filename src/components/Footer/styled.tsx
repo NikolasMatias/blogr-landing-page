@@ -16,6 +16,18 @@ const FooterDefault = styled.footer`
   & > div {
     margin-top: 3rem;
   }
+  
+  @media (min-width: 992px) {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    min-height: 0;
+    max-height: 25vh;
+    
+    & > div {
+      margin: 0;
+    }
+  }
 `
 
 export default FooterDefault

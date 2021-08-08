@@ -17,6 +17,18 @@ const ButtonDefault = styled.button<IProps>`
   
   ${props => {
     switch (props.variant) {
+      case VARIANT.FOURTH:
+          return `
+            color: ${props.theme.palette.neutral.white};
+            background-color: ${props.theme.palette.gradient.veryLightRed};
+            border: 1px solid ${props.theme.palette.neutral.white};
+          `
+      case VARIANT.THIRD:
+          return `
+            color: ${props.theme.palette.neutral.veryDarkBlackBlue};
+            background-color: transparent;
+            border: none;
+          `
         case VARIANT.SECONDARY:
             return `
           color: ${props.theme.palette.neutral.white};
