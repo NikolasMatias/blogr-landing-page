@@ -1,13 +1,14 @@
 import React, {useState} from 'react';
-import logo from './assets/images/logo.svg';
 import './App.css';
 import {ThemeProvider} from "styled-components";
-import {defaultTheme} from "./themes/DefaultTheme";
+import {defaultTheme, VARIANT} from "./themes/DefaultTheme";
 import Container from "./components/Container";
 import {Button} from "./components/Button";
-import {VARIANT} from "./components/Button/styled";
 import {GlobalStyles} from "./themes/GlobalStyles";
 import {Header} from "./components/Header";
+import Menu from "./components/Menu";
+import Title from "./components/Title";
+import {ButtonManagment} from "./components/Button/styled";
 
 function App() {
     const [theme, setTheme] = useState(defaultTheme);
@@ -18,10 +19,14 @@ function App() {
           <GlobalStyles />
         <Container>
             <Header>
-                <img src={logo} alt="Logo of the project Blogr Landing Page"/>
-                <h1>Teste 2</h1>
-                <Button variant={VARIANT.PRIMARY}>Start for Free</Button>
-                <Button variant={VARIANT.SECONDARY}>Learn More</Button>
+                <Menu />
+                <Title subtitle="Grow your audience and build your online brand">
+                    A modern publishing platform
+                </Title>
+                <ButtonManagment>
+                    <Button variant={VARIANT.PRIMARY}>Start for Free</Button>
+                    <Button variant={VARIANT.SECONDARY}>Learn More</Button>
+                </ButtonManagment>
             </Header>
         </Container>
       </ThemeProvider>

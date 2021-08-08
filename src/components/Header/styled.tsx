@@ -8,7 +8,7 @@ const HeaderDefault = styled.header`
   padding: 20px 10px 20px 10px;
   background-image: url(${props => bgPatternIntro}), linear-gradient(to top left, ${props => props.theme.palette.gradient.lightRed}, ${props => props.theme.palette.gradient.veryLightRed});
   background-repeat: no-repeat, no-repeat;
-  background-size: 70rem 85rem, 100%;
+  background-size: 75rem 82rem, 100%;
   background-position: bottom -30rem left -18rem, top left;
   border-radius: 0 0 0 50px;
   position: relative;

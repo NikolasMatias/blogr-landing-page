@@ -1,5 +1,15 @@
 // theme.ts
 import { DefaultTheme } from 'styled-components'
+
+export enum VARIANT {
+    PRIMARY,
+    SECONDARY
+}
+
+export interface IProps {
+    variant?: VARIANT
+}
+
 export const defaultTheme: DefaultTheme = {
     borderRadius: '50%',
     palette: {
