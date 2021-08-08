@@ -3,14 +3,15 @@ import TitleDefault, {SubTitle, TitleManagment} from "./styled";
 import {VARIANT} from "../../themes/DefaultTheme";
 
 interface ITitle {
-    subtitle: ReactElement
+    subtitle?: ReactElement|string,
+    variant?: VARIANT
 }
 
 const Title: React.FC<ITitle> = ({children, subtitle}) => {
     return (
-        <TitleManagment>
-            <TitleDefault variant={VARIANT.PRIMARY}>{children}</TitleDefault>
-            <SubTitle variant={VARIANT.PRIMARY} className={!subtitle ? 'invisible' : ''}>{subtitle}</SubTitle>
+        <TitleManagment variant={VARIANT.SECONDARY}>
+            <TitleDefault>{children}</TitleDefault>
+            {subtitle && <SubTitle variant={VARIANT.PRIMARY} >{subtitle}</SubTitle>}
         </TitleManagment>
     );
 }

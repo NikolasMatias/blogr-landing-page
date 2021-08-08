@@ -2,7 +2,6 @@ import MenuDefault from "./styled";
 import logo from '../../assets/images/logo.svg';
 import IconHamburger from '../../assets/images/icon-hamburger.svg';
 import React from "react";
-import {Button} from "../Button";
 
 const Menu = () => {
     return (

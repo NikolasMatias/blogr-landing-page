@@ -12,6 +12,14 @@ const HeaderDefault = styled.header`
   background-position: bottom -30rem left -18rem, top left;
   border-radius: 0 0 0 50px;
   position: relative;
+
+  & :is(h1, p) {
+    color: ${props => props.theme.palette.neutral.white};
+  }
+
+  & :is(h1) {
+    margin-top: 20vh;
+  }
 `
 
 export default HeaderDefault
