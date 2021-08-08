@@ -36,12 +36,12 @@ export const defaultTheme: DefaultTheme = {
         main: {
             family: 'Overpass',
             weights: [300, 600],
-            url: 'https://fonts.google.com/specimen/Overpass?preview.text_type=custom'
+            url: '../assets/fonts/Overpass/Overpass-Regular.ttf'
         },
         secondary: {
             family: 'Ubuntu',
             weights: [400, 500, 700],
-            url: 'https://fonts.google.com/specimen/Ubuntu?preview.text_type=custom'
+            url: '../assets/fonts/Ubuntu/Ubuntu-Regular.ttf'
         }
     }
 }

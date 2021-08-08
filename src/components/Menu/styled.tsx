@@ -10,6 +10,10 @@ const MenuDefault = styled.div`
   
   & .icon-hamburger {
     min-width: 2.5rem;
+    
+    @media (min-width: 960px) {
+      display: none;
+    }
   }
 `
 

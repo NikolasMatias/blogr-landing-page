@@ -10,7 +10,7 @@ const HeaderDefault = styled.header`
   background-repeat: no-repeat, no-repeat;
   background-size: 75rem 82rem, 100%;
   background-position: bottom -30rem left -18rem, top left;
-  border-radius: 0 0 0 50px;
+  border-radius: 0 0 0 4rem;
   position: relative;
 
   & :is(h1, p) {
