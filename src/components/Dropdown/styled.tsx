@@ -3,7 +3,11 @@ import {IProps, VARIANT} from "../../themes/DefaultTheme";
 import iconArrowDark from '../../assets/images/icon-arrow-dark.svg';
 import iconArrowLight from '../../assets/images/icon-arrow-light.svg';
 
-export const DropDownTitle = styled.h2<IProps>`
+interface IDropDownTitle {
+  active: boolean
+}
+
+export const DropDownTitle = styled.h2<IProps & IDropDownTitle>`
   position: relative;
   cursor: pointer;
   

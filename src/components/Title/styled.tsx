@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {IProps, VARIANT} from "../../themes/DefaultTheme";
 
 interface ITitleManagement {
-    grid: boolean
+    grid?: boolean
 }
 
 export const TitleManagement = styled.div<IProps & ITitleManagement>`
