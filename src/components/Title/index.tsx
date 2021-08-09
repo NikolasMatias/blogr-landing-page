@@ -4,12 +4,13 @@ import {VARIANT} from "../../themes/DefaultTheme";
 
 interface ITitle {
     subtitle?: ReactElement|string,
-    variant?: VARIANT
+    variant?: VARIANT,
+    grid?: boolean
 }
 
-const Title: React.FC<ITitle> = ({children, subtitle}) => {
+const Title: React.FC<ITitle> = ({children, subtitle, grid}) => {
     return (
-        <TitleManagement variant={VARIANT.SECONDARY}>
+        <TitleManagement grid={grid} variant={VARIANT.SECONDARY}>
             <TitleDefault>{children}</TitleDefault>
             {subtitle && <SubTitle variant={VARIANT.PRIMARY} >{subtitle}</SubTitle>}
         </TitleManagement>

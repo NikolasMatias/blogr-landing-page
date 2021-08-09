@@ -27,7 +27,15 @@ const SectionDefault = styled.section<ISectionDefault & IProps>`
                 background-position: top -12rem left 0rem;
             `
       }
-  }}
+  }};
+  
+  @media (min-width: 992px) {
+    & {
+      display: grid;
+      grid-template-columns: 10fr 1fr;
+      grid-template-rows: 50px 300px;
+    }
+  }
 `
 
 export const SectionImage = styled.img<IProps>`

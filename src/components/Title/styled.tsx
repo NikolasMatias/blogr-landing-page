@@ -1,7 +1,11 @@
 import styled from "styled-components";
 import {IProps, VARIANT} from "../../themes/DefaultTheme";
 
-export const TitleManagement = styled.div<IProps>`
+interface ITitleManagement {
+    grid: boolean
+}
+
+export const TitleManagement = styled.div<IProps & ITitleManagement>`
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -19,6 +23,14 @@ export const TitleManagement = styled.div<IProps>`
   
   & .secondary {
     color: ${props => props.theme.palette.neutral.white};
+  }
+
+  @media (min-width: 992px) {
+    ${props => {
+      if (props.grid)
+        return `grid-column: 1 / -1;`
+    }
+    };
   }
 `
 

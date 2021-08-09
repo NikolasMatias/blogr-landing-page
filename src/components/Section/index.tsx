@@ -12,7 +12,7 @@ interface ISection {
 const Section: React.FC<ISection & IProps> = ({children, title, image, backgroundImage, variant}) => {
     return (
         <SectionDefault variant={variant} backgroundImage={backgroundImage}>
-            {title && <Title>{title}</Title>}
+            {title && <Title grid={true}>{title}</Title>}
             <SectionImage src={image} variant={variant}/>
             <SectionContent variant={variant}>{children}</SectionContent>
         </SectionDefault>
