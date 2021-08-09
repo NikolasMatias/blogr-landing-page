@@ -1,9 +1,16 @@
 import styled from 'styled-components';
 import {IProps, VARIANT} from "../../themes/DefaultTheme";
 
-export const ButtonManagment = styled.div<IProps>`
+export const ButtonManagement = styled.div<IProps>`
   display: flex;
   margin-top: 10vh;
+  
+  @media (min-width: 992px) {
+    margin: 2vh 0 15vh 0;
+    min-width: 100vw;
+    flex-direction: row;
+    justify-content: center;
+  }
 `
 
 const ButtonDefault = styled.button<IProps>`
@@ -63,6 +70,20 @@ const ButtonDefault = styled.button<IProps>`
         `;
       }
     }}  
+  }
+  
+  @media (min-width: 992px) {
+    ${props => {
+        switch (props.variant) {
+          case VARIANT.THIRD:
+              return `color: ${props.theme.palette.neutral.white};`
+          case VARIANT.FOURTH:
+              return `
+                color: ${props.theme.palette.gradient.veryLightRed};
+                background-color: ${props.theme.palette.neutral.white};
+              `
+        }
+    }
   }
 `;
 

@@ -5,6 +5,7 @@ import iconArrowLight from '../../assets/images/icon-arrow-light.svg';
 
 export const DropDownTitle = styled.h2<IProps>`
   position: relative;
+  cursor: pointer;
   
   &::before {
     ${props => {
@@ -32,13 +33,26 @@ export const DropDownTitle = styled.h2<IProps>`
       return ``
     }
   }
+    
+    @media (min-width: 992px) {
+    ${props => {
+      switch (props.variant) {
+        case VARIANT.PRIMARY:
+          return `
+                background-image: url(${iconArrowLight});
+                right: 5%;
+              `
+      }
+    }}
+    }
+  }
 `
 
-interface IDropdownContentManagment {
+interface IDropdownContentManagement {
     active: boolean
 }
 
-export const DropdownContentManagment = styled.div<IProps & IDropdownContentManagment>`
+export const DropdownContentManagement = styled.div<IProps & IDropdownContentManagement>`
     ${props => {
       switch (props.variant) {
           case VARIANT.PRIMARY:
@@ -56,6 +70,30 @@ export const DropdownContentManagment = styled.div<IProps & IDropdownContentMana
               `
         }
     }}
+  
+  @media (min-width: 992px) {
+      ${props => {
+        switch (props.variant) {
+          case VARIANT.PRIMARY:
+            if (props.active)
+              return `
+                    position: absolute;
+                    min-width: 10vw;
+                    top: 8vh;
+                    left: 0vw;
+                    margin-radius: 20px;
+                    padding: 10px;
+                    display: block;
+                    background-color: ${props.theme.palette.neutral.white};
+                    color: ${props.theme.palette.neutral.veryDarkGrayishBlue};
+                `
+    
+            return `
+                    display: none;
+                  `
+        }
+      }}
+    }
 `
 
 interface IDropdownContent {
@@ -64,6 +102,7 @@ interface IDropdownContent {
 
 export const DropdownContent = styled.p<IProps & IDropdownContent>`
     color: ${props => props.theme.palette.neutral.grayishBlue};
+    cursor: pointer;
 
   ${props => {
     switch (props.variant) {
@@ -72,15 +111,31 @@ export const DropdownContent = styled.p<IProps & IDropdownContent>`
           return `
                 color: ${props.theme.palette.neutral.veryDarkGrayishBlue} !important;
                 text-align: center;
-                
             `
 
         return ``
     }
   }}
+  
+  @media (min-width: 992px) {
+  ${props => {
+    switch (props.variant) {
+      case VARIANT.PRIMARY:
+        if (props.active)
+          return `
+                color: ${props.theme.palette.neutral.veryDarkGrayishBlue} !important;
+                text-align: center;
+            `
+
+        return ``
+    }
+  }}
+  }
 `
 
 const DropdownDefault = styled.div<IProps>`
+  position: relative;
+  
   ${props => {
     switch (props.variant) {
       case VARIANT.PRIMARY:
@@ -90,6 +145,11 @@ const DropdownDefault = styled.div<IProps>`
               `
     }
   }}
+  
+  @media (min-width: 992px) {
+    font-size: .75rem;
+    width: 8rem;
+  }
 `
 
 export default DropdownDefault;

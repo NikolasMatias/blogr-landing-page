@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {IProps, VARIANT} from "../../themes/DefaultTheme";
 
-export const TitleManagment = styled.div<IProps>`
+export const TitleManagement = styled.div<IProps>`
   width: 100%;
   display: flex;
   flex-direction: column;

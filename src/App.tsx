@@ -8,7 +8,7 @@ import {GlobalStyles} from "./themes/GlobalStyles";
 import {Header} from "./components/Header";
 import Menu from "./components/Menu";
 import Title from "./components/Title";
-import {ButtonManagment} from "./components/Button/styled";
+import {ButtonManagement} from "./components/Button/styled";
 import sectionBackgroundImage from './assets/images/bg-pattern-circles.svg'
 import editorMobile from './assets/images/illustration-editor-mobile.svg';
 import laptopMobile from './assets/images/illustration-laptop-mobile.svg';
@@ -32,10 +32,10 @@ function App() {
                 <Title subtitle="Grow your audience and build your online brand">
                     A modern publishing platform
                 </Title>
-                <ButtonManagment>
+                <ButtonManagement>
                     <Button variant={VARIANT.PRIMARY}>Start for Free</Button>
                     <Button variant={VARIANT.SECONDARY}>Learn More</Button>
-                </ButtonManagment>
+                </ButtonManagement>
             </Header>
             <Section title="Designed for the future" image={editorMobile} backgroundImage={sectionBackgroundImage}>
                 <Title variant={VARIANT.SECONDARY}>Introducing an extensible editor</Title>

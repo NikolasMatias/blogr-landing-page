@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import {IProps} from "../../themes/DefaultTheme";
 
-interface IMenuManagment {
+interface IMenuManagement {
     active: boolean
 }
 
-export const MenuManagment = styled.div<IProps & IMenuManagment>`
+export const MenuManagement = styled.div<IProps & IMenuManagement>`
     display:none;
   
     @media (max-width: 991px) {
@@ -28,21 +28,33 @@ export const MenuManagment = styled.div<IProps & IMenuManagment>`
       }
     }
     }
+  
+  @media (min-width: 992px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80vw;
+  }
 `
 
 export const MenuImage = styled.img`
     z-index: 100;
 `
 
-export const MenuDropdownManagment = styled.div`
+export const MenuDropdownManagement = styled.div`
   width: 100%;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: 992px) {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
 `
 
-export const MenuButtonManagment = styled.div`
+export const MenuButtonManagement = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,6 +64,16 @@ export const MenuButtonManagment = styled.div`
   & button:first-child {
     margin-top: 30px;
     margin-bottom: 10px;
+  }
+
+  @media (min-width: 992px) {
+    flex-direction: row;
+    border: 0;
+    justify-content: center;
+
+    & button:first-child {
+      margin: 0;
+    }
   }
 `
 
