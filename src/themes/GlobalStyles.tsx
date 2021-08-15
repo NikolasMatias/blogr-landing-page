@@ -14,5 +14,6 @@ export const GlobalStyles = createGlobalStyle`
   body {
     font-family: ${props => props.theme.typography.main.family};
     font-weight: ${props => props.theme.typography.main.weights[1]};
+    overflow-x: hidden;
   }
 `
