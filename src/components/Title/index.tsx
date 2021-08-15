@@ -8,11 +8,11 @@ interface ITitle {
     grid?: boolean
 }
 
-const Title: React.FC<ITitle> = ({children, subtitle, grid}) => {
+const Title: React.FC<ITitle> = ({children, subtitle, grid, variant}) => {
     return (
-        <TitleManagement grid={grid} variant={VARIANT.SECONDARY}>
+        <TitleManagement grid={grid} variant={variant}>
             <TitleDefault>{children}</TitleDefault>
-            {subtitle && <SubTitle variant={VARIANT.PRIMARY} >{subtitle}</SubTitle>}
+            {subtitle && <SubTitle >{subtitle}</SubTitle>}
         </TitleManagement>
     );
 }
