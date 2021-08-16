@@ -5,6 +5,11 @@ const ParagraphDefault = styled.p`
     width: 80vw;
     text-align: center;
     color: ${props => props.theme.palette.neutral.veryDarkGrayishBlue};
+  
+  @media (min-width: 992px) {
+    width: auto;
+    text-align: left;
+  }
 `
 
 export default ParagraphDefault;

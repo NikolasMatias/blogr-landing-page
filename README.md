@@ -92,6 +92,8 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 - [Theming and Theme Switching with React and styled-components](https://css-tricks.com/theming-and-theme-switching-with-react-and-styled-components/) - I'm trying to find out a good way to handle themes in react using Styled Components. But in this case it didn't work. Cause this solution is for people who wanna code using javascript. In my case I'm using typescript. But it was a good try at least.
 - [Theme with styled-components and Typescript](https://medium.com/rbi-tech/theme-with-styled-components-and-typescript-209244ec15a3) - In this case this solution worked a lot. I'm still trying to figure out how is the best way to organize the informations of Themes and I'm sure it would not be solved only in this project but It's a start.
+- [CSS Grid: Simplificando layouts](https://www.alura.com.br/conteudo/css-grid-layout?gclid=CjwKCAjw092IBhAwEiwAxR1lRpxK48dADm0B6iPqVyda7e8B_T3QXO4gV3sR4CPZsoGKxS6h8ztCWBoCKBwQAvD_BwE) - I needed to remember how I could use "grid-template-areas" and this link helped me a lot with it.
+- [How to get the width of the window in React.js](https://www.jsdiaries.com/how-to-get-the-width-of-the-window-in-react-js/): I used it to remember how could I create a useState that get the width of the window everytime it change. So this way I can change the image of the sections.
 
 ## Author
 

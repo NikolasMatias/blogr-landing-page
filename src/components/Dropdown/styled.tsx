@@ -148,7 +148,7 @@ const DropdownDefault = styled.div<IProps>`
                 text-align: center;
               `
     }
-  }}
+  }};
   
   @media (min-width: 992px) {
     font-size: .75rem;
