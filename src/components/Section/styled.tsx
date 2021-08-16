@@ -49,7 +49,7 @@ const SectionDefault = styled.section<ISectionDefault & IProps>`
                 grid-template-areas: 
         "sectionTitle sectionTitle sectionTitle"
         "sectionVoid sectionContent sectionContent";
-                padding: 10vh 0 25vh 0;
+                padding: 10vh 0 18vh 0;
                 background-size: 60vw 110vh;
                 background-position: top -50vh left -10vw;
             `
@@ -96,7 +96,7 @@ export const SectionImage = styled.img<IProps>`
                 position: absolute;
                 min-width: 40vw;
                 min-height: 10vh;
-                right: -18vw;
+                right: -14vw;
                 top: 10vh;
             `
         case VARIANT.SECONDARY:
@@ -159,7 +159,7 @@ export const SectionContent = styled.div<IProps>`
             `
         case VARIANT.SECONDARY:
           return `
-                padding-right: 80px;
+                padding-right: 0 80px 0 0;
             `
         case VARIANT.THIRD:
           return `
