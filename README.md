@@ -16,8 +16,6 @@ This is a solution to the [Blogr landing page challenge on Frontend Mentor](http
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -65,33 +63,139 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Probably the main thing I have learned from this project is how to use Styled Components. 
+I don't know if I used them in the right way, or how I could improve but I will try my best to code better projects in the future.
 
-To see how you can add code snippets, see below:
+Well I did somethings I never did before in this project. I've studied to create a good way to deal with themes in this project.
+And even if it will not apply totally for what I did here, at least it will be a bridge for my next 2 projects I'm planning to
+do here on FrontendMentor.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+So the structure are not that complex. I have a themes folder where I have the DefaultTheme,
+and th GlobalStyles. They are the bases of it just like the ThemeProvider in the App.tsx
+are too.
+
+This three are the bases of everything. All of the other contents who are using the theme
+are getting this information from DefaultTheme.
+
+Now the others structures I created are by context. Cause the Styled Components are inside 
+the components folder and every single component will have an index.tsx and a styled.tsx.
+- **index.tsx**: This file is for organize the Styled Components and use the React hooks if necessary.
+- **styled.tsx**: Now this one is where I create the Styled Components that will be used for the index.tsx. In thi case I create as much as necessary.
+
+
+Besides the architecture, I have a lot of good things to talk about when it comes to the css part.
+
+I'm really proud about how I've handled the Menu. I was able to create the whole design
+without needing to create unnecessary tags to separete the "fixed" version of the normal desktop dropdown version.
+
+Since my code is Mobile First, I will put the "fixed" option outside any @media but I will still use an "active" boolean who will
+change only it is really activated. In this case It's simple, just click in the icon hamburger.
+
+Here the code:
 ```css
-.proud-of-this-css {
-  color: papayawhip;
-}
+display:none;
+  
+    @media (max-width: 991px) {
+      ${props => {
+          if (props.active) {
+              return `
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: fixed;
+                top: 55%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                min-width: 90vw;
+                min-height: 80vh;
+                background-color: ${props.theme.palette.neutral.white};
+                color: ${props.theme.palette.neutral.veryDarkBlackBlue};
+              `
+          }
+      }
+    }
+    };
+  
+  @media (min-width: 992px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80vw;
+  }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+
+As you can see it was a simple solution.
+
+Another thing I would like to talk about to is the Sections. Unfortunately I was not able to make it better in css. I'm still thinking
+in other ways to make it more readable and less... bad. But I'm out of ideas, I'm accepting sugestions.
+
+I used React again to change the images side. In some cases it is in the right side of the section and in other cases it's in the left side.
+But... I did it using absolute too, as you can see in the code bellow: 
+
+```css
+  max-width: 100%;
+filter: none;
+
+${props => {
+      switch (props.variant) {
+        case VARIANT.SECONDARY:
+            return `
+                position: absolute;
+                max-width: 100vw;
+                min-height: 10vh;
+                right: 0;
+                left: 0;
+                top: -30vh;
+            `
+      }
+}};
+
+@media (min-width: 992px) {
+& {
+  grid-area: sectionImage;
+}
+
+  ${props => {
+      switch (props.variant) {
+        case VARIANT.PRIMARY:
+          return `
+                position: absolute;
+                min-width: 40vw;
+                min-height: 10vh;
+                right: -14vw;
+                top: 10vh;
+            `
+        case VARIANT.SECONDARY:
+          return `
+                position: absolute;
+                max-width: 50vw;
+                min-height: 10vh;
+                left: 10vw;
+                top: -10vh;
+            `
+        case VARIANT.THIRD:
+            return `
+                position: absolute;
+                min-width: 40vw;
+                min-height: 10vh;
+                left: -14vw;
+                top: 5vh;
+            `
+      }
+}};
 }
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+As you can see, again I'm using React in css, and even if it's good for me cause it helped me a lot to do what I wanted. But at the same
+time I feel like I should do it without React. Cause in other situations I will not have React to work in my projects, so what?
+I cannot stop just cause of it. I need to improve more and more.
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+
+There's a lot I did in this project but I think it's the best things I could say here.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I want to continue to focus my studies in Styled Components, but I still want to use more css than react to code the styles.
 
 ### Useful resources
 
@@ -107,6 +211,4 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+One of my best friends called [Tiago Damascena](https://github.com/TiagoDamascena) gave me some advices after all of it. He helped me a lot in this project.
