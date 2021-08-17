@@ -85,9 +85,11 @@ export const DropdownContentManagement = styled.div<IProps & IDropdownContentMan
                     min-width: 10vw;
                     top: 8vh;
                     left: 0vw;
+                    border-radius: 10px;
                     margin-radius: 20px;
                     padding: 10px;
                     display: block;
+                    box-shadow: 6px 6px 2rem -15px, -6px -6px 2rem -15px;
                     background-color: ${props.theme.palette.neutral.white};
                     color: ${props.theme.palette.neutral.veryDarkGrayishBlue};
                 `
@@ -128,13 +130,21 @@ export const DropdownContent = styled.p<IProps & IDropdownContent>`
         if (props.active)
           return `
                 color: ${props.theme.palette.neutral.veryDarkGrayishBlue} !important;
-                text-align: center;
+                text-align: left;
+                padding-left: 20px;
             `
 
         return ``
     }
-  }}
   }
+  };
+
+  ${props => `
+    &:hover {
+        color: ${props.theme.palette.neutral.veryDarkBlackBlue}
+      }
+  `}
+}
 `
 
 const DropdownDefault = styled.div<IProps>`
