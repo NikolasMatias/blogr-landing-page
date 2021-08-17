@@ -7,7 +7,8 @@ interface ISection {
     title?: string,
     image: any,
     imageDesktop?: any,
-    backgroundImage: any
+    backgroundImage: any,
+    role?: string
 }
 
 const Section: React.FC<ISection & IProps> = ({children, title, image, backgroundImage, variant, imageDesktop}) => {

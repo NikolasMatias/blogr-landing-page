@@ -2,7 +2,8 @@ import styled from "styled-components";
 import {IProps, VARIANT} from "../../themes/DefaultTheme";
 
 interface ISectionDefault {
-    backgroundImage?: ImageData
+    backgroundImage?: ImageData,
+    role?: string
 }
 
 const SectionDefault = styled.section<ISectionDefault & IProps>`
