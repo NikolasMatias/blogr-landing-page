@@ -24,7 +24,7 @@ const Section: React.FC<ISection & IProps> = ({children, title, image, backgroun
     return (
         <SectionDefault variant={variant} backgroundImage={backgroundImage}>
             {title && <Title grid={true}>{title}</Title>}
-            <SectionImage src={windowWidth < 992 ? image : (imageDesktop ? imageDesktop : image)} variant={variant}/>
+            <SectionImage src={windowWidth < 992 ? image : (imageDesktop ? imageDesktop : image)} variant={variant} alt="Image of the Section"/>
             <SectionVoid />
             <SectionContent variant={variant}>{children}</SectionContent>
         </SectionDefault>

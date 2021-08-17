@@ -39,17 +39,17 @@ function App() {
                     <Button variant={VARIANT.SECONDARY}>Learn More</Button>
                 </ButtonManagement>
             </Header>
-            <Section title="Designed for the future" image={editorMobile} imageDesktop={editorDesktop} backgroundImage={sectionBackgroundImage} variant={VARIANT.PRIMARY}>
+            <Section title="Designed for the future" image={editorMobile} imageDesktop={editorDesktop} backgroundImage={sectionBackgroundImage} variant={VARIANT.PRIMARY} role="first-section">
                 <Title variant={VARIANT.PRIMARY}>Introducing an extensible editor</Title>
                 <Paragraph>Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, videos an Markdown. Extensibility with plugins and themes provide easy ways to add functionality or change the looks of a blog.</Paragraph>
                 <Title variant={VARIANT.PRIMARY}>Robust Content Management</Title>
                 <Paragraph>Flexible content management enables users to easily move though posts. Increase the usability of your blog by adding customized categories, sections, format, or flow. With this functionality, you're in full control.</Paragraph>
             </Section>
-            <Section image={illustrationPhones} backgroundImage={sectionBackgroundImage}  variant={VARIANT.SECONDARY}>
+            <Section image={illustrationPhones} backgroundImage={sectionBackgroundImage}  variant={VARIANT.SECONDARY} role="second-section">
                 <Title variant={VARIANT.SECONDARY}>State of the Art Infrastructure</Title>
                 <Paragraph>With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.</Paragraph>
             </Section>
-            <Section image={laptopMobile} imageDesktop={laptopDesktop} backgroundImage={sectionBackgroundImage} variant={VARIANT.THIRD}>
+            <Section image={laptopMobile} imageDesktop={laptopDesktop} backgroundImage={sectionBackgroundImage} variant={VARIANT.THIRD} role="third-section">
                 <Title variant={VARIANT.THIRD}>Free, Open, Simple</Title>
                 <Paragraph>Blogr is a free and open source application backed by a large community of helpful developers. It supports feture such as code syntax highlighting, RSS feeds, social media integration, third-party commeting tools, and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.</Paragraph>
                 <Title variant={VARIANT.THIRD}>Powerful tooling</Title>
