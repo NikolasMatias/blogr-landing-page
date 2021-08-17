@@ -29,15 +29,22 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+#### Mobile
+![Front-end Mobile 01](./src/assets/readme-images/blogr-mobile%2001.png)
+![Front-end Mobile 02](./src/assets/readme-images/blogr-mobile%2002.png)
+![Front-end Mobile 03](./src/assets/readme-images/blogr-mobile%2003.png)
+![Front-end Mobile 04](./src/assets/readme-images/blogr-mobile%2004.png)
+![Front-end Mobile 05](./src/assets/readme-images/blogr-mobile%2005.png)
+![Front-end Mobile 06](./src/assets/readme-images/blogr-mobile%2006.png)
+![Front-end Mobile 07](./src/assets/readme-images/blogr-mobile%2007.png)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+#### Web
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![Front-end Web 01](./src/assets/readme-images/blogr-desktop%2001.png)
+![Front-end Web 02](./src/assets/readme-images/blogr-desktop%2002.png)
+![Front-end Web 03](./src/assets/readme-images/blogr-desktop%2003.png)
+![Front-end Web 04](./src/assets/readme-images/blogr-desktop%2004.png)
+![Front-end Web 05](./src/assets/readme-images/blogr-desktop%2005.png)
 
 ### Links
 
@@ -55,8 +62,6 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 - [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
@@ -99,8 +104,6 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 - Frontend Mentor - [@NikolasMatias](https://www.frontendmentor.io/profile/NikolasMatias)
 - LinkedIn - [@nikolas-matias-xavier-morais-180831a2](https://www.linkedin.com/in/nikolas-matias-xavier-morais-180831a2/)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
 ## Acknowledgments
 
