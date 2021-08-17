@@ -22,8 +22,9 @@ const HeaderDefault = styled.header`
   }
   
   @media (min-width: 992px) {
-    background-size: 75rem 82rem, 100%;
-    background-position: bottom -30rem left -18rem, top left;
+    background-image: url(${props => bgPatternIntro}), linear-gradient(to top left, ${props => props.theme.palette.gradient.lightRed}, ${props => props.theme.palette.gradient.lightRed}, ${props => props.theme.palette.gradient.veryLightRed});
+    background-size: 190vw 230vh, 100%;
+    background-position: top -90vh left -19vw, top left;
     
     & :is(h1) {
       font-size: 3rem;
